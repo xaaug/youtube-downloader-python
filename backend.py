@@ -58,6 +58,7 @@ def download_video():
     'format': f'bestvideo[height<={resolution}]+bestaudio/best[height<={resolution}]',
            'outtmpl': f'{DOWNLOAD_DIR}/%(title)s.%(ext)s',
     'merge_output_format': 'mp4',  # Merge into MP4 format
+    'cookies': 'cookies.txt',
 }
     
         with YoutubeDL(ydl_opts) as ydl:
